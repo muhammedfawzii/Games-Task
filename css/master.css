@@ -1,0 +1,131 @@
+body {
+  font-family: "Comic Neue", cursive;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #11111186;
+
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 10px;
+}
+
+.change .nav-item .nav-link {
+  transition: all 0.5s;
+  color: white;
+}
+@media (max-width:991px) {
+  .change .nav-item .nav-link{
+    text-align: center;
+  }
+}
+.change .nav-item .nav-link:hover {
+  color: rgba(0, 153, 204, 0.409);
+  transform: scale(0.8);
+}
+.change .nav-item .active {
+  color: #09c;
+}
+header img{
+  height: 30vh;
+  object-fit: cover;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  z-index: 9999;
+}
+
+.loader {
+  position: relative;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 6rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  animation: pulsOut 1.8s ease-in-out infinite;
+  filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.75));
+}
+.loader:before {
+  width: 100%;
+  padding-bottom: 100%;
+  box-shadow: inset 0 0 0 1rem #fff;
+  animation-name: pulsIn;
+}
+.loader:after {
+  width: calc(100% - 2rem);
+  padding-bottom: calc(100% - 2rem);
+  box-shadow: 0 0 0 0 #fff;
+}
+
+@keyframes pulsIn {
+  0% {
+    box-shadow: inset 0 0 0 1rem #fff;
+    opacity: 1;
+  }
+  50%,
+  100% {
+    box-shadow: inset 0 0 0 0 #fff;
+    opacity: 0;
+  }
+}
+
+@keyframes pulsOut {
+  0%,
+  50% {
+    box-shadow: 0 0 0 0 #fff;
+    opacity: 0;
+  }
+  100% {
+    box-shadow: 0 0 0 1rem #fff;
+    opacity: 1;
+  }
+}
+
+#close {
+  color: rgba(255, 255, 255, 0.493);
+  transition: all 0.4s;
+}
+#close:hover {
+  color: white;
+}
+#scale {
+  transition: all 0.6s;
+}
+#scale:hover {
+  transform: scale(1.1);
+}
+
+.ground {
+  background-color: #0dcaf0;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 10px;
+  display: inline-block;
+}
+#color {
+  background-color: #3a497b;
+}
